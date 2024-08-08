@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(cors(
   {
-    origin:["https://www.google.com"],
+    origin:["https://todo-host-testing-frontend.vercel.app/"],
     methods:['POST','GET','PUT','DELETE'],
     credentials:true
   }
