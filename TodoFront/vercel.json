@@ -1,18 +1,8 @@
 {
-  "version": 2,
   "builds": [
-    {
-      "src": "TodoFront/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
+    { "src": "index.html", "use": "@vercel/static-build" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/$1"
-    }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
