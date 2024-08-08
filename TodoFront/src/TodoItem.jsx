@@ -1,7 +1,6 @@
 import React from "react";
-const API_BASE ='http://localhost:5000/todo';
 
-// const API_BASE = import.meta.env.VITE_API_BASE;
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 function TodoItem(props) {
   const { name, id, complete, setItems } = props;
