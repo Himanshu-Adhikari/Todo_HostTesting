@@ -15,13 +15,11 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use(cors(
-  {
-    origin:["https://todo-host-testing-frontend.vercel.app/"],
-    methods:['POST','GET','PUT','DELETE'],
-    credentials:true
-  }
-))
+app.use(cors({
+  origin: "https://todo-host-testing-frontend.vercel.app",
+  methods: ['POST', 'GET', 'PUT', 'DELETE'],
+  credentials: true
+}));
 
 
 // Connecting to the database
