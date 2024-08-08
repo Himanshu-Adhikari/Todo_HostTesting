@@ -24,7 +24,7 @@ function App() {
 
   const addItem = async () => {
     try {
-      const response = await fetch(`${API_BASE}/todo/add'`, {
+      const response = await fetch(`${API_BASE}/todo/add/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
