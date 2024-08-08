@@ -1,12 +1,14 @@
 import React from "react";
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/todo';
+const API_BASE ='http://localhost:5000/todo';
+
+// const API_BASE = import.meta.env.VITE_API_BASE;
 
 function TodoItem(props) {
   const { name, id, complete, setItems } = props;
 
   const deleteTodo = async (id) => {
     try {
-      const response = await fetch(API_BASE + "/delete/" + id, {
+      const response = await fetch(`${API_BASE}/delete/${id}`, {
         method: "DELETE",
       });
 
@@ -23,7 +25,7 @@ function TodoItem(props) {
 
   const updateTodo = async (id) => {
     try {
-      const response = await fetch(API_BASE + "/update/" + id, {
+      const response = await fetch(`${API_BASE}/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

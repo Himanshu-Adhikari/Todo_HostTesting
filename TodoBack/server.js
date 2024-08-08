@@ -11,16 +11,13 @@ const URI = process.env.DB_URI;
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-
-
 app.use(cors({
-  origin: "https://todo-host-testing-frontend.vercel.app",
+  origin: ["http://localhost:5173", "https://todo-host-testing-frontend.vercel.app"],
   methods: ['POST', 'GET', 'PUT', 'DELETE'],
   credentials: true
 }));
 
+app.use(express.json());
 
 // Connecting to the database
 mongoose.connect(URI, { dbName: 'todos_db' })

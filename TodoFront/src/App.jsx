@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/todo';
+
+const API_BASE ='http://localhost:5000/todo';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -15,15 +16,15 @@ function App() {
   };
 
   const GetTodos = () => {
-    fetch(API_BASE)
+    fetch(`${API_BASE}`)
       .then(res => res.json())
       .then(data => setItems(data))
-      .catch(err => console.log(err));
+      .catch(err => console.error(err));
   };
 
   const addItem = async () => {
     try {
-      const response = await fetch(API_BASE + "/add", {
+      const response = await fetch(`${API_BASE}/todo/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
