@@ -1,0 +1,15 @@
+{
+  "name": "todoback",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^x.x.x",
+    "dotenv": "^x.x.x",
+    "express": "^x.x.x",
+    "mongodb": "^6.8.0",
+    "mongoose": "^x.x.x"
+  }
+}
