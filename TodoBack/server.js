@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(cors(
   {
-    origin:,
+    origin:["https://www.google.com"],
     methods:['POST','GET','PUT','DELETE'],
     credentials:true
   }

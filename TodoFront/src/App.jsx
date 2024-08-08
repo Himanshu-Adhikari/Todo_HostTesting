@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
-const API_BASE = 'http://localhost:5000/todo';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/todo';
 
 function App() {
   const [items, setItems] = useState([]);
